@@ -1,14 +1,31 @@
 <template>
   <div>
-    <nuxt />
+    <app-nav />
+    <main>
+      <nuxt class="app-body" />
+    </main>
+    <app-footer />
   </div>
 </template>
 
-<style>
-html {
-  font-family: 'Source Sans Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI',
-    Roboto, 'Helvetica Neue', Arial, sans-serif;
+<script>
+import AppFooter from '~/components/AppFooter.vue'
+import AppNav from '~/components/AppNav.vue'
+
+export default {
+  components: {
+    AppFooter,
+    AppNav
+  }
+}
+</script>
+
+<style scoped>
+body {
+  border: 10px solid #ccc;
+  min-height: 100vh;
   font-size: 16px;
+  line-height: 1.4;
   word-spacing: 1px;
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
@@ -24,32 +41,22 @@ html {
   margin: 0;
 }
 
-.button--green {
-  display: inline-block;
-  border-radius: 4px;
-  border: 1px solid #3b8070;
-  color: #3b8070;
-  text-decoration: none;
-  padding: 10px 30px;
+main {
+  padding: 0;
+  width: 95vw;
+  margin-left: 2vw;
 }
 
-.button--green:hover {
-  color: #fff;
-  background-color: #3b8070;
+.app-body {
+  margin: 0 auto;
+  margin-top: 100px;
 }
 
-.button--grey {
-  display: inline-block;
-  border-radius: 4px;
-  border: 1px solid #35495e;
-  color: #35495e;
-  text-decoration: none;
-  padding: 10px 30px;
-  margin-left: 15px;
-}
-
-.button--grey:hover {
-  color: #fff;
-  background-color: #35495e;
+@media screen and (min-width: 1000px) {
+  main {
+    padding: 40px;
+    width: 80vw;
+    margin: 0 auto;
+  }
 }
 </style>
