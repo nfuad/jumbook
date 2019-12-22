@@ -28,7 +28,7 @@
           >
             -
           </button>
-          <input v-model="quantity" type="number" />
+          <input v-model="quantity" type="number" max="30" />
           <button @click="quantity++" class="update-num">+</button>
         </p>
         <p>
@@ -112,7 +112,7 @@ export default {
 }
 
 input {
-  width: 60px;
+  width: 70px;
   font-size: 25px;
   margin: 0 10px;
   padding: 5px 10px;
