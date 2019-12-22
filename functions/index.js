@@ -10,7 +10,7 @@ const headers = {
 
 // Each JavaScript file to be deployed as a serverless Lambda function
 // must export a handler method
-exports.handler = async (event, ctx) => {
+exports.handler = async (event, context) => {
   if (!event.body || event.httpMethod !== 'POST') {
     return {
       statusCode: 400,
