@@ -55,20 +55,18 @@ exports.handler = async (event, ctx) => {
       })
       .then((customer) => {
         // create new charge
-        return stripe.charges
-          .create(
-            {
-              currency: 'usd',
-              amount: data.stripeAmt,
-              receipt_email: data.stripeEmail,
-              customer: customer.id,
-              description: 'Sample Charge'
-            },
-            {
-              idempotency_key: data.stripeIdempotency
-            }
-          )
-          .then((result) => console.log(`Charge created: ${result}`))
+        return stripe.charges.create(
+          {
+            currency: 'usd',
+            amount: data.stripeAmt,
+            receipt_email: data.stripeEmail,
+            customer: customer.id,
+            description: 'Sample Charge'
+          },
+          {
+            idempotency_key: data.stripeIdempotency
+          }
+        )
       })
 
     return {
