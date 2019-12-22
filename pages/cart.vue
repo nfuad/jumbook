@@ -12,22 +12,18 @@
       <app-loader />
     </section>
 
-    <section v-else-if="cartUIStatus === 'success'" class="success">
-      <h2>Success!</h2>
+    <section
+      v-else-if="cartUIStatus === 'success' || 'failure'"
+      class="success"
+    >
       <p>
         Thank you for your purchase. You'll be receiving your items in 4
-        business days.
+        business days (if your payment was sucessful.)
       </p>
       <p>Forgot something?</p>
       <button class="pay-with-stripe">
         <nuxt-link exact to="/">Back to Home</nuxt-link>
       </button>
-    </section>
-
-    <section v-else-if="cartUIStatus === 'failure'">
-      <p>
-        Oops, something went wrong. Redirecting you to your cart to try again.
-      </p>
     </section>
 
     <app-sales-info />

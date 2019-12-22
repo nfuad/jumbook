@@ -41,7 +41,10 @@
         <p>Placeholder loader</p>
       </div>
 
-      <div v-else class="loadcontain">
+      <div
+        v-else-if="cartUIStatus === 'success' || 'failure'"
+        class="loadcontain"
+      >
         <h4>Success!</h4>
       </div>
     </div>
