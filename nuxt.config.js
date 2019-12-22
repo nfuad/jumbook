@@ -1,4 +1,5 @@
-import data from './static/storedata.json'
+import data from './static/data.json'
+
 const dynamicRoutes = () => {
   return new Promise((resolve) => {
     resolve(data.map((el) => `product/${el.id}`))
@@ -27,8 +28,7 @@ export default {
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
       {
         rel: 'stylesheet',
-        href:
-          'https://fonts.googleapis.com/css?family=Montserrat:300,600|PT+Serif&display=swap'
+        href: 'https://fonts.googleapis.com/css?family=Questrial&display=swap'
       }
     ]
   },
