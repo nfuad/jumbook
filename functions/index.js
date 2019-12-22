@@ -1,17 +1,5 @@
-// import dotenv
-const dotenv = require('dotenv')
-
-// parse the contents, assign it to process.env, & return an Object with a parsed key
-// containing the loaded content
-const result = dotenv.config()
-
-if (result.error) {
-  // throw an error if can't read or .env not found
-  throw result.error
-}
-
 // require and initialize stripe with the secret key
-const stripe = require('stripe')(process.env.STRIPE_SECRET_KEY)
+const stripe = require('stripe')('pk_test_PsUXCvFVMZA6dqYrQx30EX6600KLrx5Xtu')
 // Stripe docs: https://stripe.com/docs
 const headers = {
   'Access-Control-Allow-Origin': '*',
