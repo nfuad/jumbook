@@ -90,7 +90,6 @@ h2 span:after {
 @media screen and (max-width: 699px) {
   .featureditems {
     width: 83vw;
-    margin-left: 5vw;
     div {
       padding: 10px 20px;
       margin-bottom: 10px;
