@@ -24,7 +24,7 @@
         :options="stripeOptions"
         @change="complete = $event.complete"
         class="stripe-card"
-        :stripe="stripeKey"
+        stripe="pk_test_PsUXCvFVMZA6dqYrQx30EX6600KLrx5Xtu"
       />
       <button
         @click="pay"
