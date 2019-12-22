@@ -36,18 +36,12 @@
     </div>
 
     <div v-else class="statussubmit">
-      <div v-if="cartUIStatus === 'failure'">
-        <h3>Oh No!</h3>
-        <p>Something went wrong!</p>
-        <button @click="clearCart">Please try again</button>
-      </div>
-
-      <div v-else-if="cartUIStatus === 'loading'" class="loadcontain">
+      <div v-if="cartUIStatus === 'loading'" class="loadcontain">
         <h4>Please hold, we're filling up your cart with goodies</h4>
         <p>Placeholder loader</p>
       </div>
 
-      <div v-else-if="cartUIStatus === 'success'" class="loadcontain">
+      <div v-else class="loadcontain">
         <h4>Success!</h4>
       </div>
     </div>
